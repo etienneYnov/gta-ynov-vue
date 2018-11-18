@@ -48,6 +48,14 @@ let router = new Router({
         requiresAuth: true,
         isAdmin: true
       }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+      meta: {
+        guest: false
+      }
     }
   ]
 })
