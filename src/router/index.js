@@ -5,6 +5,7 @@ import Login from '@/components/Login'
 import Register from '@/components/Register'
 import UserBoard from '@/components/UserBoard'
 import Admin from '@/components/Admin'
+import WelcomePage from '@/components/WelcomePage'
 
 Vue.use(Router)
 
@@ -13,6 +14,11 @@ let router = new Router({
   routes: [
     {
       path: '/',
+      name: 'WelcomePage',
+      component: WelcomePage
+    },
+    {
+      path: '/HelloWorld/:name',
       name: 'HelloWorld',
       component: HelloWorld
     },
@@ -47,14 +53,6 @@ let router = new Router({
       meta: {
         requiresAuth: true,
         isAdmin: true
-      }
-    },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login,
-      meta: {
-        guest: false
       }
     }
   ]
