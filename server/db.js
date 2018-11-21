@@ -5,6 +5,7 @@ class Db {
     constructor(file) {
         this.db = new sqlite3.Database(file);
         this.createTable()
+        this.createTable2()
     }
 
     createTable() {
@@ -16,6 +17,16 @@ class Db {
                 user_pass text,
                 isAdmin integer)`
         return this.db.run(sql);
+    }
+
+    createTable2() {
+        const sql2 = `
+            CREATE TABLE IF NOT EXISTS temps (
+                id_temps integer PRIMARY KEY, 
+                debut_taf_temps date, 
+                fin_taf_temps date,
+                FK_user integer)`
+        return this.db.run(sql2);
     }
 
     selectByEmail(email, callback) {
