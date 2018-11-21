@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>Application GTA</h1>
     <h2>{{msg}}</h2>
-    <button @click="goLoginPage">GO !</button>
+    <button @click="goLoginPage">Se connecter</button>
   </div>
 </template>
 

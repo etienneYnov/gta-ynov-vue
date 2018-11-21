@@ -6,8 +6,12 @@ import Register from '@/components/Register'
 import UserBoard from '@/components/UserBoard'
 import Admin from '@/components/Admin'
 import WelcomePage from '@/components/WelcomePage'
+import SaisieHoraire from '@/components/SaisieHoraire'
+import DemandesHoraire from '@/components/DemandesHoraire'
+import { routerHistory, writeHistory } from 'vue-router-back-button'
 
 Vue.use(Router)
+Vue.use(routerHistory)
 
 let router = new Router({
   mode: 'history',
@@ -35,7 +39,26 @@ let router = new Router({
       name: 'register',
       component: Register,
       meta: {
-        guest: true
+        requiresAuth: true,
+        isAdmin: true
+      }
+    },
+    {
+      path: '/saisieHoraire',
+      name: 'saisieHoraire',
+      component: SaisieHoraire,
+      meta: {
+        requiresAuth: true,
+        isAdmin: true
+      }
+    },
+    {
+      path: '/DemandesHoraire',
+      name: 'DemandesHoraire',
+      component: DemandesHoraire,
+      meta: {
+        requiresAuth: true,
+        isAdmin: true
       }
     },
     {
@@ -57,7 +80,7 @@ let router = new Router({
     }
   ]
 })
-
+router.afterEach(writeHistory)
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (localStorage.getItem('jwt') == null) {

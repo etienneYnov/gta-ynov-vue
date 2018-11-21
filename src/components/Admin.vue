@@ -2,7 +2,10 @@
   <div class="hello">
     <h1>Page des admin</h1>
     <h2>{{msg}}</h2>
-    <button @click="logout">logout</button>
+    <button @click="logout">Deconnexion</button>
+    <button @click="goRegisterPage">Ajouter un salarié</button>
+    <button @click="goToRequests">Voir les demandes</button>
+    <button @click="changePlanning">Changement horaires</button>
   </div>
 </template>
 
@@ -17,6 +20,9 @@ export default {
     goLoginPage () {
       this.$router.push({ path: 'login' })
     },
+    goRegisterPage () {
+      this.$router.push({ name: 'register' })
+    },
     logout (to, from, next) {
       console.log('Je veux me deconnecter bordel !!!!!')
       if (localStorage.getItem('jwt') == null) {
@@ -30,6 +36,12 @@ export default {
         user.authenticated = false
         this.$router.push({ path: 'login' })
       }
+    },
+    goToRequests () {
+      this.$router.push({ name: 'DemandesHoraire' })
+    },
+    changePlanning () {
+      this.$router.push({ name: 'saisieHoraire' })
     }
   }
 }

@@ -20,10 +20,7 @@ export default {
     logout (to, from, next) {
       console.log('Je veux me deconnecter bordel !!!!!')
       if (localStorage.getItem('jwt') == null) {
-        next({
-          path: '/login',
-          params: { nextUrl: to.fullPath }
-        })
+        this.$router.push({ path: 'login' })
       } else {
         let user = JSON.parse(localStorage.getItem('user'))
         localStorage.removeItem('jwt')
