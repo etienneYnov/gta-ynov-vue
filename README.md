@@ -27,6 +27,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 -----------------------------------------------------------------------------------------------------------------
+juju@juju.fr
+plop
 
 Etape 1:
 
