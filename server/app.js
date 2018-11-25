@@ -68,7 +68,7 @@ router.post('/login', (req, res) => {
         });
         res.status(200).send({ auth: true, token: token, user: user });
       });
-})
+});
 
 router.get('/logout', function(req, res, next) {
     if (req.session) {
@@ -82,6 +82,16 @@ router.get('/logout', function(req, res, next) {
         }
       });
     }
+});
+
+router.get('/allUsers', function(req, res) {
+	db.selectAll(
+		(err, allUsers) => {
+		if (err) {return res.status(500).send('Error on the server.');}
+		else { 
+		  res.json(allUsers)
+		}
+	});
 });
 
 

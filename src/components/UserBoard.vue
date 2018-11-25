@@ -2,7 +2,8 @@
   <div class="hello">
     <h1>Page utilisateur</h1>
     <h2>{{msg}}</h2>
-    <button @click="logout">logout</button>
+    <button @click="logout">Deconnexion</button>
+    <button @click="goFormTime">Demande de changement d'horaires</button>
   </div>
 </template>
 
@@ -27,6 +28,9 @@ export default {
         user.authenticated = false
         this.$router.push({ path: 'login' })
       }
+    },
+    goFormTime () {
+      this.$router.push({ path: 'AgendaForm' })
     }
   }
 }

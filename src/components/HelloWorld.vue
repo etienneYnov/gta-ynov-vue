@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>Application</h1>
     <h2>{{msg}}</h2>
-    <button @click="logout">logout</button>
+    <button @click="logout">Deconnexion</button>
   </div>
 </template>
 

@@ -56,6 +56,7 @@ export default {
       e.preventDefault()
 
       if (this.password === this.password_confirmation && this.password.length > 0) {
+        console.log(this.isAdmin)
         let url = 'http://localhost:3000/register'
         if (this.isAdmin != null || this.isAdmin === 1) url = 'http://localhost:3000/register-admin'
         this.$http.post(url, {

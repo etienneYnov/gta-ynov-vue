@@ -8,10 +8,10 @@ import Admin from '@/components/Admin'
 import WelcomePage from '@/components/WelcomePage'
 import SaisieHoraire from '@/components/SaisieHoraire'
 import DemandesHoraire from '@/components/DemandesHoraire'
-import { routerHistory, writeHistory } from 'vue-router-back-button'
+import AgendaForm from '@/components/AgendaForm'
+import allUsers from '@/components/allUsers'
 
 Vue.use(Router)
-Vue.use(routerHistory)
 
 let router = new Router({
   mode: 'history',
@@ -77,10 +77,26 @@ let router = new Router({
         requiresAuth: true,
         isAdmin: true
       }
+    },
+    {
+      path: '/AgendaForm',
+      name: 'AgendaForm',
+      component: AgendaForm,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/allUsers',
+      name: 'allUsers',
+      component: allUsers,
+      meta: {
+        requiresAuth: true,
+        isAdmin: true
+      }
     }
   ]
 })
-router.afterEach(writeHistory)
 router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.requiresAuth)) {
     if (localStorage.getItem('jwt') == null) {
