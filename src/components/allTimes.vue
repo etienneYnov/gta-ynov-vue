@@ -2,12 +2,12 @@
 <div>
   <h2>Liste des horaires:</h2>
   <ul>
-    <li v-for="agenda in agendas" :key="agenda.id_temps"> 
+    <li v-for="agenda in agendas" :key="agenda.id_temps">
       <span>
-         Nom: {{ agenda.name }} 
+         Nom: {{ agenda.name }}
       </span>
       <span>
-        Horaires du: 
+        Horaires du:
       </span>
       <span>
         {{ agenda.debut_taf_temps }}

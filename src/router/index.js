@@ -5,7 +5,6 @@ import Login from '@/components/Login'
 import Register from '@/components/Register'
 import UserBoard from '@/components/UserBoard'
 import Admin from '@/components/Admin'
-import WelcomePage from '@/components/WelcomePage'
 import SaisieHoraire from '@/components/SaisieHoraire'
 import DemandesHoraire from '@/components/DemandesHoraire'
 import AgendaForm from '@/components/AgendaForm'
@@ -19,17 +18,12 @@ let router = new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
-      name: 'WelcomePage',
-      component: WelcomePage
-    },
-    {
       path: '/HelloWorld/:name',
       name: 'HelloWorld',
       component: HelloWorld
     },
     {
-      path: '/login',
+      path: '/',
       name: 'login',
       component: Login,
       meta: {
