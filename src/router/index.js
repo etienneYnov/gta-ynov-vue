@@ -9,7 +9,9 @@ import WelcomePage from '@/components/WelcomePage'
 import SaisieHoraire from '@/components/SaisieHoraire'
 import DemandesHoraire from '@/components/DemandesHoraire'
 import AgendaForm from '@/components/AgendaForm'
+import allTimes from '@/components/allTimes'
 import allUsers from '@/components/allUsers'
+import HorairePerso from '@/components/HorairePerso'
 
 Vue.use(Router)
 
@@ -90,6 +92,24 @@ let router = new Router({
       path: '/allUsers',
       name: 'allUsers',
       component: allUsers,
+      meta: {
+        requiresAuth: true,
+        isAdmin: true
+      }
+    },
+    {
+      path: '/allTimes',
+      name: 'allTimes',
+      component: allTimes,
+      meta: {
+        requiresAuth: true,
+        isAdmin: true
+      }
+    },
+    {
+      path: '/HorairePerso',
+      name: 'HorairePerso',
+      component: HorairePerso,
       meta: {
         requiresAuth: true,
         isAdmin: true

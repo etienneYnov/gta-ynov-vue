@@ -94,6 +94,42 @@ router.get('/allUsers', function(req, res) {
 	});
 });
 
+router.get('/allTimes', function(req, res) {
+	db.selectAllTimes(
+		(err, allTimes) => {
+		if (err) {return res.status(500).send('Error on the server.');}
+		else { 
+		  res.json(allTimes)
+		}
+	});
+});
+
+router.get('/HorairePerso', function(req, res) {
+	db.selectAllTimes(
+		(err, timePerso) => {
+		if (err) {return res.status(500).send('Error on the server.');}
+		else { 
+		  res.json(timePerso)
+		}
+	});
+});
+
+router.post('/saisieHoraire', function(req, res) {
+	db.insertTime([
+		req.body.name,
+		req.body.debut_taf_temps,
+		req.body.fin_taf_temps,
+		req.body.H_start_temps,
+        req.body.M_start_temps,
+        req.body.H_end_temps,
+        req.body.M_end_temps,
+        req.body.FK_userID
+		],
+		function (err) {
+			 
+		}); 
+});
+
 
 app.use(router)
 

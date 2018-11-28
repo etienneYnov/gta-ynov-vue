@@ -4,8 +4,9 @@
     <h2>{{msg}}</h2>
     <button @click="logout">Deconnexion</button>
     <button @click="goRegisterPage">Ajouter un salarié</button>
-    <button @click="goToRequests">Voir les demandes</button>
-    <button @click="changePlanning">Changement horaires</button>
+    <button @click="goToAgendas">Liste des horaires</button>
+    <button @click="changePlanning">Saisie horaires</button>
+    <button @click="goListUsers">Liste des salariés</button>
   </div>
 </template>
 
@@ -19,6 +20,9 @@ export default {
   methods: {
     goLoginPage () {
       this.$router.push({ path: 'login' })
+    },
+    goListUsers () {
+      this.$router.push({ path: 'allUsers' })
     },
     goRegisterPage () {
       this.$router.push({ name: 'register' })
@@ -37,8 +41,8 @@ export default {
         this.$router.push({ path: 'login' })
       }
     },
-    goToRequests () {
-      this.$router.push({ name: 'DemandesHoraire' })
+    goToAgendas () {
+      this.$router.push({ name: 'allTimes' })
     },
     changePlanning () {
       this.$router.push({ name: 'saisieHoraire' })

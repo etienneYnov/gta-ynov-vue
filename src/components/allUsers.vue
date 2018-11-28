@@ -1,9 +1,10 @@
 <template>
-<div id="app">
+<div>
   <h2>Liste des utilisateurs:</h2>
   <ul>
-    <li v-for="user in users" :key="user.id">{{ user.name }}</li>
+    <a v-on:click="goPageHorairePerso ()"><li v-for="user in users" :key="user.id"> {{ user.name }} </li></a>
   </ul>
+<button @click="back">Back</button>
 </div>
 </template>
 
@@ -18,6 +19,9 @@ export default {
   methods: {
     back () {
       this.$router.go(-1)
+    },
+    goPageHorairePerso () {
+      this.$router.push({ name: 'HorairePerso' })
     }
   },
   created: function () {
@@ -25,7 +29,6 @@ export default {
     this.$http.get('http://localhost:3000/allUsers')
       .then(function (response) {
         vm.users = response.data
-        console.log(response.data)
       })
   }
 }

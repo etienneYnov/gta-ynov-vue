@@ -36,6 +36,7 @@
         </button>
       </div>
     </form>
+    <button @click="back">Back</button>
   </div>
 </template>
 
@@ -72,9 +73,9 @@ export default {
             if (localStorage.getItem('jwt') != null) {
               this.$emit('loggedIn')
               if (this.$route.params.nextUrl != null) {
-                this.$router.push(this.$route.params.nextUrl)
+                this.$router.push({ name: 'admin' })
               } else {
-                this.$router.push('/')
+                this.$router.push('/admin')
               }
             }
           })
@@ -87,6 +88,9 @@ export default {
 
         return alert('Mot de passe incorrect')
       }
+    },
+    back () {
+      this.$router.go(-1)
     }
   }
 }
