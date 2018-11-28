@@ -115,7 +115,6 @@ J'ai:
 	le but etait par la suite de faire les update et delete
 	
 Je suid desolé pour le foutoir dans le code et le manque de commentaires...
-Le responsive fonctionne sans mettre de breakpoint et me convient en affichage.
 
 Je vais essayer de rajouter un peu de css à la pause de 12h.
 
