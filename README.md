@@ -118,4 +118,10 @@ Je suid desolé pour le foutoir dans le code et le manque de commentaires...
 
 Je vais essayer de rajouter un peu de css à la pause de 12h.
 
-PS: Je n'ai pas reussi à refaire le build, pourtant cela avait fonctionné la première fois. (je retente ce midi)
+PS: pour tester: 
+	- utiliser chrome
+	- email:
+		admin@admin.fr
+	- password:
+		plop
+	
