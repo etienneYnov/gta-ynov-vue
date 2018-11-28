@@ -2,7 +2,13 @@
 <div>
   <h2>Liste des utilisateurs:</h2>
   <ul>
-    <a v-on:click="goPageHorairePerso ()"><li v-for="user in users" :key="user.id"> {{ user.name }} </li></a>
+    <a v-on:click="goPageHorairePerso ()">
+      <li v-for="user in users" :key="user.id">
+        <b-card class="text-center">
+          {{ user.name }}
+        </b-card>
+      </li>
+    </a>
   </ul>
 <button @click="back">Back</button>
 </div>

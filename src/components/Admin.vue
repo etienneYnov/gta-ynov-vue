@@ -2,11 +2,11 @@
   <div class="hello">
     <h1>Page des admin</h1>
     <h2>{{msg}}</h2>
-    <button @click="logout">Deconnexion</button>
-    <button @click="goRegisterPage">Ajouter un salarié</button>
-    <button @click="goToAgendas">Liste des horaires</button>
-    <button @click="changePlanning">Saisie horaires</button>
-    <button @click="goListUsers">Liste des salariés</button>
+    <b-button @click="logout">Deconnexion</b-button>
+    <b-button @click="goRegisterPage">Ajouter un salarié</b-button>
+    <b-button @click="goToAgendas">Liste des horaires</b-button>
+    <b-button @click="changePlanning">Saisie horaires</b-button>
+    <b-button @click="goListUsers">Liste des salariés</b-button>
   </div>
 </template>
 
