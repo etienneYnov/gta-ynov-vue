@@ -10,7 +10,7 @@
       </li>
     </a>
   </ul>
-<button @click="back">Back</button>
+<b-button variant="danger" @click="back">Back</b-button>
 </div>
 </template>
 

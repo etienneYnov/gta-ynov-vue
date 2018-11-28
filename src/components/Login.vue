@@ -4,18 +4,18 @@
     <form>
       <label for="email" >Addresse E-Mail</label>
       <div>
-        <input id="email" type="email" v-model="email" required autofocus>
+        <input class="form-control" id="email" type="email" v-model="email" required autofocus>
       </div>
       <div>
         <label for="password" >Password</label>
         <div>
-          <input id="password" type="password" v-model="password" required>
+          <input class="form-control" id="password" type="password" v-model="password" required>
         </div>
       </div>
       <div>
-        <button type="submit" @click="handleSubmit">
+        <b-button type="submit" @click="handleSubmit">
           Connexion
-        </button>
+        </b-button>
       </div>
     </form>
   </div>

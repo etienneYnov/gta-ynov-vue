@@ -2,8 +2,8 @@
   <div class="hello">
     <h1>Page utilisateur</h1>
     <h2>{{msg}}</h2>
-    <button @click="logout">Deconnexion</button>
-    <button @click="goFormTime">Demande de changement d'horaires</button>
+    <b-button @click="logout">Deconnexion</b-button>
+    <b-button @click="goFormTime">Demande de changement d'horaires</b-button>
   </div>
 </template>
 

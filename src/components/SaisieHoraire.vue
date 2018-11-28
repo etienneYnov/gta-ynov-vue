@@ -6,7 +6,7 @@
       <label for="name"></label>
       <div>
         <label for="name">Choisir le nom</label>
-        <select v-model="name">
+        <select class="form-control" v-model="name">
           <option v-for="user in users" :key="user.id">
             {{ user.name }}
           </option>
@@ -23,7 +23,6 @@
             {{ h }}
           </option>
         </select>
-        H
       </div>
       <div>
       <label for="M_start_temps">Minute embauche:</label>
@@ -32,7 +31,6 @@
             {{ m }}
           </option>
         </select>
-        Mn
       </div>
       <div>
       <label for="H_end_temps">Heure fin:</label>
@@ -41,7 +39,6 @@
             {{ h }}
           </option>
         </select>
-        H
       </div>
       <div>
       <label for="M_end_temps">Minute fin:</label>
@@ -50,15 +47,12 @@
             {{ m }}
           </option>
         </select>
-        Mn
       </div>
       <div>
-        <button type="submit" @click="handleSubmit">
-          Enregistrer
-        </button>
+        <b-button type="submit" @click="handleSubmit">Enregistrer</b-button>
+        <b-button variant="danger" @click="back">Back</b-button>
       </div>
     </form>
-    <button @click="back">Back</button>
   </div>
 </template>
 
