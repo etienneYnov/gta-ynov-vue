@@ -1,9 +1,7 @@
 <template>
 <div>
   <h2>Liste des horaires:</h2>
-  <ul>
-    <li v-for="agenda in agendas" :key="agenda.id_temps">
-      <b-card class="text-center">
+    <b-card class="text-center" v-for="agenda in agendas" :key="agenda.id_temps">
         <span>
           Nom: {{ agenda.name }}
         </span>
@@ -19,9 +17,8 @@
         <span>
           Fin: {{ agenda.H_end_temps }} Heures {{ agenda.M_end_temps }} Minutes
         </span>
-      </b-card>
-    </li>
-  </ul>
+    </b-card>
+
 <b-button variant="danger" @click="back">Back</b-button>
 </div>
 </template>

@@ -4,39 +4,37 @@
     <form>
       <label for="name">Nom</label>
       <div>
-        <input id="name" type="text" v-model="name" required autofocus>
+        <input class="form-control" id="name" type="text" v-model="name" required autofocus>
       </div>
 
       <label for="email" >Addresse E-Mail</label>
       <div>
-        <input id="email" type="email" v-model="email" required>
+        <input class="form-control" id="email" type="email" v-model="email" required>
       </div>
 
       <label for="password">Password</label>
       <div>
-        <input id="password" type="password" v-model="password" required>
+        <input class="form-control" id="password" type="password" v-model="password" required>
       </div>
 
       <label for="password-confirm">Confirmer Password</label>
       <div>
-        <input id="password-confirm" type="password" v-model="password_confirmation" required>
+        <input class="form-control" id="password-confirm" type="password" v-model="password_confirmation" required>
       </div>
 
       <label for="password-confirm">Administrateur ?</label>
       <div>
-        <select v-model="isAdmin">
+        <select class="form-control" v-model="isAdmin">
           <option value=1>Oui</option>
           <option value=0>Non</option>
         </select>
       </div>
 
       <div>
-        <button type="submit" @click="handleSubmit">
-          Ajouter
-        </button>
+        <b-button variant="success" type="submit" @click="handleSubmit">Ajouter</b-button>
+        <b-button variant="danger" @click="back">Back</b-button>
       </div>
     </form>
-    <button @click="back">Back</button>
   </div>
 </template>
 

@@ -1,15 +1,12 @@
 <template>
 <div>
   <h2>Liste des utilisateurs:</h2>
-  <ul>
-    <a v-on:click="goPageHorairePerso ()">
-      <li v-for="user in users" :key="user.id">
-        <b-card class="text-center">
-          {{ user.name }}
-        </b-card>
-      </li>
-    </a>
-  </ul>
+  <a v-on:click="goPageHorairePerso ()">
+    <b-card class="text-center" v-for="user in users" :key="user.id">
+      {{ user.name }}
+    </b-card>
+  </a>
+
 <b-button variant="danger" @click="back">Back</b-button>
 </div>
 </template>
