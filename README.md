@@ -27,8 +27,6 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 
 -----------------------------------------------------------------------------------------------------------------
-juju@juju.fr
-plop
 
 Etape 1:
 
@@ -98,3 +96,27 @@ Revue de modelisation et creation d'une table temps
 Etape 15:
 
 En cours de création des formulaires ....
+
+-------------------------------------------------------------------------------------------
+
+J'ai:
+
+- Preparé les requetes necessaires mais pas assez de temps pour toutes les utiliser
+- voulu avancer sur le fonctionnel donc j'ai perdu beaucoup de temps 
+	- nous pouvons ajouter des utilisateurs (admin et pas admin)
+	- ajouter des temps de travail
+	- voir la liste de tous les user
+	- voir la liste de tous les temps saisis
+	- commencé la navigation
+	- se connecter
+	- se deconnecter
+	- acces au page en fonction du role
+	
+	le but etait par la suite de faire les update et delete
+	
+Je suid desolé pour le foutoir dans le code et le manque de commentaires...
+Le responsive fonctionne sans mettre de breakpoint et me convient en affichage.
+
+Je vais essayer de rajouter un peu de css à la pause de 12h.
+
+PS: Je n'ai pas reussi à refaire le build, pourtant cela avait fonctionné la première fois. (je retente ce midi)
